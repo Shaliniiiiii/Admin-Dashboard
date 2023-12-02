@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #030303;
+  color: #FFFFFF;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.container {
+  max-width: 800px;
+  margin-left: 400px ;
+  margin-top: 200px;
+  background-color: #030303;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  align-items: center ;
+  color: #FFFFFF;
+  font-size: 32px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+label {
+  display: inline;
+  margin: 10px 0 5px;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.customSongs input {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 40%;
+  padding: 8px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  font-size: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.regularSongs {
+  display: flex;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.regularSongs input {
+  margin-top: 10px; /* Added margin-top */
+  width: 70px; /* Adjusted width */
+  display: inline-block;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-right: 20px; 
 }
+
+input {
+  width: 70%;
+  display: flex;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+
+button {
+  width: 70%;
+  padding: 10px;
+  background-color: #6741D9;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+button:hover {
+  background-color: #6741D9;
+  border: 1px solid #F0C3F1;
+}
+
+
+.disabled-button {
+  background-color: #cccccc; /* Set the background color to a gray shade */
+  color: #666666; /* Set the text color to a darker gray */
+  cursor: not-allowed; /* Change the cursor to indicate the button is not clickable */
+  /* You can add additional styling as needed */
+}
+
+.disabled-button:hover {
+  background-color: darkgrey; /* Set the background color to a gray shade */
+  color: #666666; /* Set the text color to a darker gray */
+  cursor: not-allowed; /* Change the cursor to indicate the button is not clickable */
+  /* You can add additional styling as needed */
+}
+
+

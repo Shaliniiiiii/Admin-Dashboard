@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Login from './Components/Login';
+import AdminDashboard from './Components/AdminDashboard';
 import './App.css';
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  const handleLogin = () => {
+    // Assuming the login logic sets the user to some non-null value
+    setUser("username");
+  };
+
+  // Example response object (replace this with actual data fetched from your API)
+  const exampleResponse = {
+    name: 'Social',
+    location: 'Hebbal',
+    charge_customers: true,
+    category_6: 150,
+    category_7: 100,
+    category_8: 75,
+    category_9: 50,
+    category_10: 25,
+  };
+
+  console.log('User:', user); // Check if the user is being set correctly
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      {!user ? (
+        <Login onLogin={handleLogin} />
+      ) : (
+        
+          <AdminDashboard response={exampleResponse} />
+      )}
     </div>
   );
 }
